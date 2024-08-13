@@ -56,3 +56,35 @@ JOB PORTAL
             --> php artisan migrate:referesh --seed
 
     3. Install development tools (laravel-debugbar)
+        -> only okay to be used during devlopment progress, not in live. because it may expose some explicit data
+        -> --dev only instal in development dependency composer
+        -> once you deploy in production it will be seperated dependency
+
+    4. Setup Tailwind css using vite
+        -> Setup tailwind css with laravel the right way
+        -> what's node
+            --> javaScript runtime, run javascript program in computer, as it can be run in the browser
+            --> tailwind is a npm package
+            --> we need node to get npm to be able to install tailwind
+            
+        -> Vite vs Laravel-mix
+            --> is a front-end toolings
+            --> when you download js/css library they usually contain additional file. 
+            --> optimized your website by reducing the js file that the user have to download making the website load faster
+            --> it will load only necessary js file 
+                ---> why there's two? 
+                    -> vite are the most modern solutions
+
+        -> npm command
+            -> npm install -D tailwindcss postcss autoprefixer
+            -> npx tailwinds init -p = initialize tailwind config files
+
+        -> define the tailwind.config.js
+            --> refer to the tailwind laravel documentation
+            --> with the use of vite/laravel-mix. it will remove the un-use utilities classes from user to downloand in the browser
+
+        -> add tailwind directive in the app.css
+        -> run npm run dev = to compile all the assets
+
+        -> if you take a look at the package.json
+            -> before this you were run the npm run dev. in the dev{clause} there's where it identify what need to be run
