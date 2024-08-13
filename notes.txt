@@ -105,9 +105,10 @@ JOB PORTAL
         -> making sure the first initial touch point will be redirect to the job.index 
             --> Route::get('', fn()=>to_route('jobs.index'));
 
-    8. Job Page: Job Card & Link Button Components
+    8. Job Page: Job Card & Link Button Components 143/151
         -> try to understand better about model binding in the route, from controller.
         -> study again how to create a <a href></a> as a component
         -> <x-link-button :href="route('jobs.show', $job)"> Show Details</x-link-button>
         -> 
 
+    9. Breadcrupms Navigation
