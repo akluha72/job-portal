@@ -89,10 +89,13 @@ JOB PORTAL
         -> if you take a look at the package.json
             -> before this you were run the npm run dev. in the dev{clause} there's where it identify what need to be run
     
-    5. Layout using components
+    5. Layout using components ------ what's the different with normal layout inheritance
         -> new layout component for the app
         -> php artisan make:component Layout --view
         -> {{slot}} special variable to be added inside component
             --> use <x-layout></x-layout> in the index.blade.php
-            
+
     # alternative for npm run dev are npm run build
+
+    6. Job page & card components
+        -> 
