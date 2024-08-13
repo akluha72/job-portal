@@ -1,0 +1,58 @@
+JOB PORTAL 
+    1. Description of the project
+        -> View job offer
+        -> Search for different job by title and descriptoin and company name
+        -> Filtering
+        -> Alpine.js minamilistic of 
+        -> Open job detail, and see the other suggestion job from the same company
+        -> Blade advance component
+            --> Card component
+            --> Breadcrump
+        -> Tagging of job offer.
+        -> login/sign-in
+        -> Authetication & authorization (if login only can apply job)
+        -> Upload pdf document
+        -> Flash Message
+        -> Record of what job have you apply
+            --> how many other applicant
+            --> your asking salary on the job
+            --> average salary asking ont he same job
+            --> cancel application
+        -> Employer side
+            --> if the job already have applicant, employer can't edit the job
+            --> policies and authorization. 
+            --> form to create a job with validation 
+            --> logout from the account
+    
+    2. Creating the job portal and job model
+        -> creating a model for job
+            --> php artisan make:model Job -mf (m=migration f=factory)
+
+        -> creating controller
+            --> php artisan make:controller JobController --resource
+
+        -> modifying the migration file
+            -->  create (title, description, salary, location, category, experience);
+        
+        -> create static array funciton in job model
+            --> php 7.4
+            --> Static property you can use it without having to create a new instance of this job model. you can access it by using job.
+        
+        -> create a new static array in model, that's can be used in column migration for experience
+            --> An enum (short for "enumeration") is a data type that consists of a set of predefined values. It’s used to represent a variable that can only take one of a limited set of values, which are typically names or labels that map to underlying integers or strings.
+
+        -> Configure job factory
+            --> title  we use jobTitle() generator from faker. Don't have to configure it
+            --> responsibility to create job model and some fake data
+            --> 'salary' => fake()->numberBetwee(5_000) [php version 7] = the seperator for number? 
+            --> for category and experience we use the class property we have created in the model
+                ---> A data structure (array) that is declared as static within a class, shared across all instances of the class.
+                ---> A class property
+
+        -> Define seed in the seeder.php 
+            --> example job::factory(100)->create();
+        
+        -> Run command artisan command
+            --> php artisan migrate:referesh --seed
+
+    3. Install development tools (laravel-debugbar)
