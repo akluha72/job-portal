@@ -99,3 +99,8 @@ JOB PORTAL
 
     6. Job page & card components
         -> 
+
+    7. Job page: Tag Components & Job info
+        -> showing currency unit {{ number_format($job->salary)}}
+        -> making sure the first initial touch point will be redirect to the job.index 
+            --> Route::get('', fn()=>to_route('jobs.index'));
