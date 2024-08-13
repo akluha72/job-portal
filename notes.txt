@@ -111,4 +111,5 @@ JOB PORTAL
         -> <x-link-button :href="route('jobs.show', $job)"> Show Details</x-link-button>
         -> 
 
-    9. Breadcrupms Navigation
+    9. Tailwind form
+        -> installing tailwind form components
