@@ -16,6 +16,7 @@
                     </div>
                 </div>
             </div>
+            <button class="w-full">Filter</button>
         </form>
     </x-card>
 
