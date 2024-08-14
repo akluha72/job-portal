@@ -12,11 +12,18 @@ class RadioGroup extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $name, 
+        public string $name,
         public array $options
-    )
+        //
+    ) {
+
+    }
+
+    public function optionsWithLabels(): array
     {
-        
+        return array_is_list($this->options) ?
+            array_combine($this->options, $this->options)
+            : $this->options;
     }
 
     /**
