@@ -113,3 +113,15 @@ JOB PORTAL
 
     9. Tailwind form
         -> installing tailwind form components
+
+    10. Filtering jobs: Form & searching for text in job postcss
+        ->
+
+    11. Filtering jobs: radio group component
+        -> λ php artisan make:component RadioGroup 
+        -> make it uppercase if you need a class
+        -> CREATE A CONSTRUCTUR PROPERTY PROMOTION
+            -> Passing an argument to the constructor
+            -> PUblic = visuality, publicly accessible
+            -> they become a property to the class
+            -> became attribute of the component
