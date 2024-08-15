@@ -125,3 +125,7 @@ JOB PORTAL
             -> PUblic = visuality, publicly accessible
             -> they become a property to the class
             -> became attribute of the component
+
+    12. Filtering Jobs : Clearing the input
+        -> svg is a element that's being drawn by a browser, so that you can always customize the color by using tailwind or etc
+        -> you can add padding in input field to avoid x button to be top on of the text
