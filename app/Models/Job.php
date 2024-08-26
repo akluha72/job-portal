@@ -6,12 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Job extends Model
 {
     use HasFactory;
 
     public static array $experience = ['entry', 'intermediate', 'senior'];
     public static array $category = ['IT','Finance','Sales','Marketing'];
+
+    public function employer(): BelongsTo
+    {
+       return $this->belongsTo(Employer::class);
+    }
 
     //take query object, 
     //additional args to be passed in the scope array, will limit the parameter to an array object. 
